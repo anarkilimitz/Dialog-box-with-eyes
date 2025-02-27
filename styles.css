@@ -18,26 +18,51 @@ body {
 
 .character {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 150px;
     margin: 0 auto 20px;
 }
 
-.eyes {
+.face {
     position: absolute;
-    top: 30%;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 40px;
+    width: 80px;
+    height: 100px;
+}
+
+.eyes {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+}
+
+.eye {
+    width: 20px;
     height: 20px;
     background-color: black;
     border-radius: 50%;
+    transition: opacity 0.3s ease; /* Плавное исчезновение глаз */
+}
+
+.mouth {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 10px;
+    background-color: black;
+    border-radius: 5px;
 }
 
 .hand {
     position: absolute;
     width: 20px;
-    height: 40px;
+    height: 60px;
     background-color: #ffcc00;
     border-radius: 10px;
     top: 50%;
@@ -46,12 +71,12 @@ body {
 
 .left {
     left: 10%;
-    transform-origin: top left;
+    transform-origin: top center; /* Точка вращения — верхний центр */
 }
 
 .right {
     right: 10%;
-    transform-origin: top right;
+    transform-origin: top center; /* Точка вращения — верхний центр */
 }
 
 input[type="password"] {
