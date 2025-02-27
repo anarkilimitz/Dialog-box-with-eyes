@@ -4,9 +4,9 @@ const rightHand = document.querySelector('.hand.right');
 const eyes = document.querySelectorAll('.eye');
 
 passwordField.addEventListener('focus', () => {
-    // Левая рука: поворачиваем на -90deg и добавляем наклон на -45deg
+    // Левая рука: поворачиваем на -90deg и добавляем наклон на -60deg
     leftHand.style.transform = 'rotate(-90deg) rotateZ(-60deg)';
-    // Правая рука: поворачиваем на 90deg и добавляем наклон на 45deg
+    // Правая рука: поворачиваем на 90deg и добавляем наклон на 60deg
     rightHand.style.transform = 'rotate(90deg) rotateZ(60deg)';
 
     // Задержка перед исчезновением глаз
